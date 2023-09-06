@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;900&display=swap");
+
+:root {
+  --mainColor: #0d0d0d;
+  --scondeColor: #fbc911;
+}
+body {
+  background-color: var(--mainColor);
+  font-family: "Poppins", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  padding-left: 0 !important;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s all ease;
+}
+.widthUp {
+  width: 220px !important;
+  padding: 20px !important;
+}
+/*! -------------------------- End Global --------------------------------- */
+
+nav {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  z-index: 9;
+}
+.share-icon {
+  display: flex;
+  flex-direction: column;
+}
+.share-icon i {
+  margin-bottom: 10px;
+}
+.show-nav {
+  height: 100vh;
+  width: 60px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+nav .icon {
+  width: 50px;
+  height: 50px;
+}
+nav .icon img {
+  width: 100%;
+}
+.nav-bar {
+  font-size: 12px;
+  width: 0;
+  position: relative;
+  left: 0;
+  top: 0;
+  background-color: var(--mainColor);
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.5s;
+}
+.nav-bar ul li {
+  margin-bottom: 20px;
+}
+.nav-bar ul li a:hover {
+  color: var(--scondeColor);
+  padding-left: 7px;
+}
+
+/*! ----------------------------End Nav ----------------------------------- */
+
+/*!--------------Spinner----------------- */
+.spinner-cover {
+  width: 100%;
+  height: 100vh;
+  /* position: relative; */
+  inset: 0;
+  z-index: 10;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: var(--mainColor);
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader {
+  top: 50%;
+  left: 50%;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background: var(--scondeColor);
+  width: 3px;
+  height: 24px;
+  transform: translateX(-50%);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*! -------------------Burger Menu ------------------------*/
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 10%;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 80%;
+  transform-origin: left center;
+  transform: translateY(-50%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  top: 0;
+  left: 5px;
+  transform: rotate(405deg);
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  top: 28px;
+  left: 5px;
+  transform: rotate(-405deg);
+}
+
+/*! ---------------------- Home -------------------------- */
+
+/* .container {
+  max-width: 1130px !important;
+} */
+.row {
+  margin-left: 0 !important;
+}
+.col {
+  /* width: 270px; */
+  /* height: 250px; */
+  display: flex;
+  justify-content: center;
+}
+
+.col-content {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.col-content:hover .img-box {
+  filter: brightness(0.7);
+}
+.col-content:hover {
+  filter: drop-shadow(0 0 2px var(--scondeColor)) drop-shadow(0 0 2px var(--scondeColor));
+}
+.img-box {
+  width: 350px;
+  padding-inline: 2rem;
+}
+.img-box img {
+  width: 100%;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  bottom: -100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s all ease;
+}
+
+.col-content:hover .layer {
+  bottom: 0;
+}
+
+.layer h2 {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  align-self: flex-end;
+}
+
+.area {
+  width: 200px;
+  margin-right: 20px;
+  text-align: center;
+  color: #fff;
+  filter: brightness(0.9);
+  cursor: pointer;
+}
+
+.area i {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+.inputs-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+  top: 210px;
+}
+.inputs-box input {
+  width: 45%;
+  font-size: 13px;
+}
+.inputs-box input:focus {
+  box-shadow: 0 0 0 0.2rem var(--scondeColor);
+  border: none;
+  outline: none;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.search-box #searchByName,
+.search-box #searchByLetter {
+  width: 45%;
+  margin: 40px 0;
+  color: transparent !important;
+  background-color: var(--mainColor);
+  border: 1px solid #fff;
+  outline: none;
+  font-size: 13px;
+  color: #fff !important;
+}
+.search-box #searchByName::placeholder,
+.search-box #searchByLetter::placeholder {
+  color: silver;
+}
+
+.search-box #searchByName:focus,
+.search-box #searchByLetter:focus {
+  border: none;
+  box-shadow: 0 0 0 0.2rem #7e660f;
+}
+
+.min-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  height: 300px;
+  cursor: pointer;
+}
+
+.min-box i {
+  font-size: 50px;
+}
+
+.meal-detilas .meal-info .recipes-tag span {
+  font-size: 13px;
+  font-weight: 400;
+  background-color: #cff4fc;
+  color: #055160 !important;
+  /* color: #000; */
+}
+.meal-detilas .meal-info .description {
+  font-size: 12px;
+  line-height: 20px;
+  word-spacing: 3px;
+  letter-spacing: 0.5px;
+}
+.meal-detilas .img-container h2 {
+  font-size: 22px;
+}
+.meal-detilas {
+  margin-left: 36px !important;
+}
+.meal-detilas .meal-info ul li {
+  font-size: 25px;
+  font-weight: 600;
+}
+.meal-detilas .meal-info ul li:last-child span {
+  font-size: 12px;
+  padding: 5px 10px;
+  background-color: #f8d7da;
+}

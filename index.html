@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="icon" href="./Assets/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div id="navBar" class="nav-bar">
+        <ul>
+          <li><a class="text-capitalize" href="#" id="search">search</a></li>
+          <li><a class="text-capitalize" href="#" id="categoris">categoris</a></li>
+          <li><a class="text-capitalize" href="#" id="area">area</a></li>
+          <li><a class="text-capitalize" href="#" id="Ingredients">Ingredients</a></li>
+          <li><a class="text-capitalize" href="#" id="contact">Contact Us</a></li>
+        </ul>
+        <div class="nav-foot text-white d-flex flex-column gap-3">
+          <div class="nav-socail-icon d-flex gap-3">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-earth-americas"></i>
+          </div>
+          <p>Copyright Â© 2019 All Rights Reserved.</p>
+        </div>
+      </div>
+      <div class="show-nav">
+        <div class="icon">
+          <img src="./Assets/logo.png" alt="logo" />
+        </div>
+
+        <label id="burger-box" for="burger" class="burger">
+          <input id="burger" type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <div class="share-icon">
+          <i class="fa-solid fa-earth-americas"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </nav>
+    <section class="container mt-4">
+      <div id="spinner-cover" class="spinner-cover container d-none">
+        <span class="loader"></span>
+      </div>
+      <div id="search"></div>
+      <div
+        id="card-container"
+        class="container row row-cols-sm-1 row-cols-md-2 row-cols-lg-4 g-3 d-flex flex-wrap justify-content-center"></div>
+      <div id="card" class="container row g-4 d-flex flex-wrap justify-content-center"></div>
+    </section>
+    <script src="./javascript/code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="./javascript/bootstrap.bundle.min.js"></script>
+    <script src="./javascript/main.js"></script>
+  </body>
+</html>
